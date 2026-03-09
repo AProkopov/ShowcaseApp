@@ -1,15 +1,28 @@
 *.iml
 .gradle
-/local.properties
+local.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/deviceManager.xml
+/.idea/deploymentTargetSelector.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+# Build artifacts
+*.apk
+*.aar
+
+# Signing
+*.keystore
+*.jks
+
+# Logs and profiling
+*.log
+*.hprof
