@@ -1,0 +1,31 @@
+build:
+  maxIssues: 0
+
+complexity:
+  LongMethod:
+    threshold: 30
+  LongParameterList:
+    functionThreshold: 8
+    constructorThreshold: 10
+  TooManyFunctions:
+    thresholdInFiles: 20
+    thresholdInClasses: 15
+    thresholdInInterfaces: 10
+
+naming:
+  FunctionNaming:
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9]*'
+
+style:
+  MagicNumber:
+    active: false
+  ReturnCount:
+    max: 3
+  WildcardImport:
+    active: true
+    excludeImports:
+      - 'kotlinx.android.synthetic.*'
+  NewLineAtEndOfFile:
+    active: true
