@@ -12,12 +12,12 @@ Started: 2026-04-04
 
 ## Phase 1: GitHub Workflow
 - [x] Configure branch protection on `master`
-- [ ] Create GitHub Projects board (Backlog -> Ready -> In Progress -> In Review -> Done)
+- [x] Create GitHub Projects board (Backlog -> Ready -> In Progress -> In Review -> Done)
 - [x] Create labels: `infra`, `feature`, `bug`, `ci-cd`, `agent`, `architecture`, `documentation`
 - [x] Create issue templates (feature request, bug report, task)
 - [x] Create PR template
 - [x] Create milestone issues for Phases 2-6 (#1-#5)
-- [ ] Verify end-to-end: branch -> PR -> review -> merge
+- [x] Verify end-to-end: branch -> PR -> review -> merge (PR #6)
 
 ## Phase 2: CI/CD Pipeline
 - [ ] Android build workflow (assembleDebug, test, lint)
