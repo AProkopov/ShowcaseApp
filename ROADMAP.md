@@ -27,12 +27,12 @@ Started: 2026-04-04
 - [x] README with build badge
 
 ## Phase 3: First AI Agents
-- [ ] Create `android-dev` plugin scaffold
-- [ ] Build `android-code-writer` agent
-- [ ] Build `android-pr-reviewer` agent
-- [ ] Build `/new-feature` command
-- [ ] Build `/review-pr` command
-- [ ] Test end-to-end: `/new-feature` produces a compilable PR with review
+- [x] Create `android-dev` plugin scaffold
+- [x] Build `android-code-writer` agent
+- [x] Build `android-pr-reviewer` agent
+- [x] Build `/new-feature` command
+- [x] Build `/review-pr` command
+- [x] Test end-to-end: code-writer -> PR -> reviewer -> fix -> merge (PR #9, issue #8)
 
 ## Phase 4: ShowcaseApp Architecture (interleave with Phase 5)
 - [ ] Multi-module setup with convention plugins (`build-logic/`)
