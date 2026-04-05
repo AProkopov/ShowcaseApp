@@ -20,11 +20,11 @@ Started: 2026-04-04
 - [x] Verify end-to-end: branch -> PR -> review -> merge (PR #6)
 
 ## Phase 2: CI/CD Pipeline
-- [ ] Android build workflow (assembleDebug, test, lint)
-- [ ] Add Detekt + ktlint for code quality
-- [ ] Code quality workflow
-- [ ] Wire status checks to branch protection
-- [ ] README with build badge
+- [x] Android build workflow (assembleDebug, test, lint)
+- [x] Add Detekt + ktlint for code quality
+- [x] Code quality workflow
+- [x] Wire status checks to branch protection (5 required checks)
+- [x] README with build badge
 
 ## Phase 3: First AI Agents
 - [ ] Create `android-dev` plugin scaffold
