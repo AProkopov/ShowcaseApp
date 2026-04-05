@@ -7,17 +7,17 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 class AboutViewModel : ViewModel() {
-    private val _uiState: MutableStateFlow<AboutUiState> = MutableStateFlow(createSuccessState())
-    val uiState: StateFlow<AboutUiState> = _uiState.asStateFlow()
-
-    private fun createSuccessState(): AboutUiState.Success =
-        AboutUiState.Success(
-            appName = APP_NAME,
-            versionName = BuildConfig.VERSION_NAME,
-            author = AUTHOR,
-            description = DESCRIPTION,
-            githubUrl = GITHUB_URL,
+    private val _uiState: MutableStateFlow<AboutUiState> =
+        MutableStateFlow(
+            AboutUiState(
+                appName = APP_NAME,
+                versionName = BuildConfig.VERSION_NAME,
+                author = AUTHOR,
+                description = DESCRIPTION,
+                githubUrl = GITHUB_URL,
+            ),
         )
+    val uiState: StateFlow<AboutUiState> = _uiState.asStateFlow()
 
     companion object {
         private const val APP_NAME = "ShowcaseApp"

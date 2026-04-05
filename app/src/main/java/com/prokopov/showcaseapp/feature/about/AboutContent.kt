@@ -19,7 +19,7 @@ import com.prokopov.showcaseapp.ui.theme.ShowcaseAppTheme
 
 @Composable
 fun AboutContent(
-    uiState: AboutUiState.Success,
+    uiState: AboutUiState,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -38,17 +38,20 @@ fun AboutContent(
         Spacer(modifier = Modifier.height(16.dp))
         AboutInfoLine("${stringResource(R.string.about_author_label)}: ${uiState.author}")
         Spacer(modifier = Modifier.height(8.dp))
-        Text(
+        AboutInfoLine(
             text = "${stringResource(R.string.about_github_label)}: ${uiState.githubUrl}",
-            style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.primary,
         )
     }
 }
 
 @Composable
-private fun AboutInfoLine(text: String) {
-    Text(text = text, style = MaterialTheme.typography.bodyMedium)
+private fun AboutInfoLine(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: androidx.compose.ui.graphics.Color = androidx.compose.ui.graphics.Color.Unspecified,
+) {
+    Text(text = text, style = MaterialTheme.typography.bodyMedium, color = color, modifier = modifier)
 }
 
 @Suppress("UnusedPrivateMember")
@@ -56,14 +59,15 @@ private fun AboutInfoLine(text: String) {
 @Composable
 private fun AboutContentPreview() {
     ShowcaseAppTheme {
-        val previewState =
-            AboutUiState.Success(
-                appName = "ShowcaseApp",
-                versionName = "1.0",
-                author = "Anton Prokopov",
-                description = "Android app demonstrating best engineering practices",
-                githubUrl = "https://github.com/AProkopov/ShowcaseApp",
-            )
-        AboutContent(uiState = previewState)
+        AboutContent(
+            uiState =
+                AboutUiState(
+                    appName = "ShowcaseApp",
+                    versionName = "1.0",
+                    author = "Anton Prokopov",
+                    description = "Android app demonstrating best engineering practices",
+                    githubUrl = "https://github.com/AProkopov/ShowcaseApp",
+                ),
+        )
     }
 }

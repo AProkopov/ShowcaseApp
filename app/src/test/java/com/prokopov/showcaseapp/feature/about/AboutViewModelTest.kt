@@ -8,43 +8,33 @@ class AboutViewModelTest {
     private val viewModel = AboutViewModel()
 
     @Test
-    fun `uiState emits Success with correct app name`() {
-        val state = viewModel.uiState.value
-        assertTrue(state is AboutUiState.Success)
-        assertEquals("ShowcaseApp", (state as AboutUiState.Success).appName)
+    fun `uiState has correct app name`() {
+        assertEquals("ShowcaseApp", viewModel.uiState.value.appName)
     }
 
     @Test
-    fun `uiState emits Success with correct author`() {
-        val state = viewModel.uiState.value
-        assertTrue(state is AboutUiState.Success)
-        assertEquals("Anton Prokopov", (state as AboutUiState.Success).author)
+    fun `uiState has correct author`() {
+        assertEquals("Anton Prokopov", viewModel.uiState.value.author)
     }
 
     @Test
-    fun `uiState emits Success with correct description`() {
-        val state = viewModel.uiState.value
-        assertTrue(state is AboutUiState.Success)
+    fun `uiState has correct description`() {
         assertEquals(
             "Android app demonstrating best engineering practices",
-            (state as AboutUiState.Success).description,
+            viewModel.uiState.value.description,
         )
     }
 
     @Test
-    fun `uiState emits Success with correct github url`() {
-        val state = viewModel.uiState.value
-        assertTrue(state is AboutUiState.Success)
+    fun `uiState has correct github url`() {
         assertEquals(
             "https://github.com/AProkopov/ShowcaseApp",
-            (state as AboutUiState.Success).githubUrl,
+            viewModel.uiState.value.githubUrl,
         )
     }
 
     @Test
-    fun `uiState emits Success with non-empty version name`() {
-        val state = viewModel.uiState.value
-        assertTrue(state is AboutUiState.Success)
-        assertTrue((state as AboutUiState.Success).versionName.isNotEmpty())
+    fun `uiState has non-empty version name`() {
+        assertTrue(viewModel.uiState.value.versionName.isNotEmpty())
     }
 }
