@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ShowcaseApp</string>
+    <string name="about_title">About</string>
+    <string name="about_author_label">Author</string>
+    <string name="about_version_label">Version</string>
+    <string name="about_github_label">GitHub</string>
 </resources>
